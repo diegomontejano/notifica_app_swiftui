@@ -1,0 +1,13 @@
+# Xcode
+xcuserdata/
+.build/
+.ipa
+.dSYM.zip
+.dSYM
+.DS_Store
+
+# Credentials
+GoogleService-Info.plist 
+
+# Ignore
+assets/ignore/*
