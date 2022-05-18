@@ -38,15 +38,7 @@ struct NotificationCard: View {
                 Spacer()
                 HStack(spacing: 0) {
                     // countdown bar
-                    Rectangle()
-                        .frame(maxHeight: 8)
-                        .foregroundColor(.orange)
-                        .cornerRadius(10)
-                        .offset(x: +10)
-                    Rectangle()
-                        .frame(maxWidth: 40, maxHeight: 8)
-                        .foregroundColor(.blue)
-                        .cornerRadius(10)
+                    CountdownBar()
                 }
             }
         }

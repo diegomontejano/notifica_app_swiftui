@@ -16,6 +16,7 @@
 		7978791D283074840074B2A5 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7978791C283074840074B2A5 /* CustomColors.swift */; };
 		79787920283089050074B2A5 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7978791F283089050074B2A5 /* CustomTabBar.swift */; };
 		798E0BDE2835402A00E68EDA /* NotificationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E0BDD2835402A00E68EDA /* NotificationCard.swift */; };
+		798E0BE028354B0500E68EDA /* CountdownBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E0BDF28354B0500E68EDA /* CountdownBar.swift */; };
 		79B7F16928330F6C001DE585 /* ValidateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B7F16828330F6C001DE585 /* ValidateTextField.swift */; };
 		79DB318A2832F41200B458CC /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DB31892832F41200B458CC /* AppController.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		7978791C283074840074B2A5 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		7978791F283089050074B2A5 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		798E0BDD2835402A00E68EDA /* NotificationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCard.swift; sourceTree = "<group>"; };
+		798E0BDF28354B0500E68EDA /* CountdownBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownBar.swift; sourceTree = "<group>"; };
 		79B7F16828330F6C001DE585 /* ValidateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateTextField.swift; sourceTree = "<group>"; };
 		79DB31892832F41200B458CC /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +101,7 @@
 				7978791C283074840074B2A5 /* CustomColors.swift */,
 				7978791F283089050074B2A5 /* CustomTabBar.swift */,
 				798E0BDD2835402A00E68EDA /* NotificationCard.swift */,
+				798E0BDF28354B0500E68EDA /* CountdownBar.swift */,
 				79B7F16828330F6C001DE585 /* ValidateTextField.swift */,
 			);
 			path = Components;
@@ -187,6 +190,7 @@
 				7978791D283074840074B2A5 /* CustomColors.swift in Sources */,
 				7921985F282F272B00DEA3D2 /* MainView.swift in Sources */,
 				7921986C282F27B600DEA3D2 /* PontoView.swift in Sources */,
+				798E0BE028354B0500E68EDA /* CountdownBar.swift in Sources */,
 				7921985D282F272B00DEA3D2 /* notificaApp.swift in Sources */,
 				79B7F16928330F6C001DE585 /* ValidateTextField.swift in Sources */,
 				79787920283089050074B2A5 /* CustomTabBar.swift in Sources */,
