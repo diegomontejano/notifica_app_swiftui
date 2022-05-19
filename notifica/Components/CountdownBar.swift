@@ -1,13 +1,12 @@
 import SwiftUI
 
 struct CountdownBar: View {
-    @State var progressTimer = 0.0
     let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
+    @EnvironmentObject var appController: AppController
+
 
 var body: some View {
     VStack{
-        Text("\(progressTimer*100)%")
-        
         ZStack{
             GeometryReader {geo in
                 Rectangle()
@@ -15,17 +14,19 @@ var body: some View {
                     .foregroundColor(.gray)
                     .cornerRadius(10)
                 Rectangle()
-                    .frame(width: geo.size.width*progressTimer, height: 8)
+                    .frame(width: geo.size.width*appController.countdownTimer, height: 8)
                     .foregroundColor(.orange)
                     .cornerRadius(10)
-                    .onReceive(timer) { _ in // start the animation
-                        if progressTimer < 1.0 {
-                            progressTimer += 0.01
+                    .onReceive(timer) { _ in // start animation
+                        if appController.countdownTimer < 1.0 {
+                            appController.countdownTimer += 0.01
                         }
                     }
                 }
             }
         }
+        .frame(maxHeight: 50)
+        //.background(.blue)
         
         
     }

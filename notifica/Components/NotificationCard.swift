@@ -24,7 +24,7 @@ struct NotificationCard: View {
             }
             Divider()
             HStack {
-                Text("Carga horária diária       ")
+                Text("Carga horária diária        ")
                 Picker("cargaHoraria", selection: $appController.workloadPicker) {
                     Text("4").tag(4)
                     Text("6").tag(6)
@@ -34,12 +34,9 @@ struct NotificationCard: View {
             }
             Divider()
             HStack {
-                Text("Faltam " + String(appController.countdownTimer).replacingOccurrences(of: ".", with: ":") + " min")
+                Text("Faltam        " + String(appController.countdownTimer).replacingOccurrences(of: ".", with: ":") + " min")
                 Spacer()
-                HStack(spacing: 0) {
-                    // countdown bar
-                    CountdownBar()
-                }
+                CountdownBar()
             }
         }
         .padding()
