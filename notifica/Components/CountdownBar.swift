@@ -4,7 +4,6 @@ struct CountdownBar: View {
     let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
     @EnvironmentObject var appController: AppController
 
-
 var body: some View {
     HStack(alignment: .center) {
         ZStack{

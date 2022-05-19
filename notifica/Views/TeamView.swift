@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct PickerView: View {
+struct TeamView: View {
     var moeda = ["Item 1", "Item 2", "Item 3"]
     
     var body: some View {
@@ -26,9 +26,9 @@ struct PickerView: View {
     }
 }
 
-struct PickerView_Previews: PreviewProvider {
+struct TeamView_Previews: PreviewProvider {
     static var previews: some View {
-        PickerView()
+        TeamView()
             .environmentObject(AppController())
     }
 }

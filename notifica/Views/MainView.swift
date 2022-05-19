@@ -17,11 +17,11 @@ struct MainView: View {
                     }
                 }
                 .tag(0)
-            PickerView()
+            TeamView()
                 .tabItem{
                     VStack{
                         Image(systemName: "person.3")
-                        Text("Devs")
+                        Text("Team")
                     }
                 }
                 .tag(1)
