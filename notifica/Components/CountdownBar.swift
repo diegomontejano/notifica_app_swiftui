@@ -6,12 +6,12 @@ struct CountdownBar: View {
 
 
 var body: some View {
-    VStack{
+    HStack(alignment: .center) {
         ZStack{
             GeometryReader {geo in
                 Rectangle()
                     .frame(width: geo.size.width, height: 8)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.grayColor2)
                     .cornerRadius(10)
                 Rectangle()
                     .frame(width: geo.size.width*appController.countdownTimer, height: 8)
@@ -24,11 +24,8 @@ var body: some View {
                     }
                 }
             }
+            .frame(maxWidth: .infinity, maxHeight: 10)
         }
-        .frame(maxHeight: 50)
-        //.background(.blue)
-        
-        
     }
 }
     

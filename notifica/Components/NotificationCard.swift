@@ -5,11 +5,13 @@ struct NotificationCard: View {
     
     var body: some View {
         VStack(spacing: 10){
+            // toggle button
             HStack{
                 Toggle("Habilitar notificações", isOn:  $appController.enableNotifications)
                     .toggleStyle(SwitchToggleStyle(tint: .orange))
             }
             Divider()
+            // minutes picker
             HStack {
                 Text("Notificar quando faltar")
                 Spacer()
@@ -23,8 +25,9 @@ struct NotificationCard: View {
                 }
             }
             Divider()
+            // workload picker
             HStack {
-                Text("Carga horária diária        ")
+                Text("Carga horária diária    ")
                 Picker("cargaHoraria", selection: $appController.workloadPicker) {
                     Text("4").tag(4)
                     Text("6").tag(6)
@@ -33,9 +36,10 @@ struct NotificationCard: View {
                 .pickerStyle(SegmentedPickerStyle())
             }
             Divider()
-            HStack {
-                Text("Faltam        " + String(appController.countdownTimer).replacingOccurrences(of: ".", with: ":") + " min")
-                Spacer()
+            // countdown timer
+            HStack(alignment: .center) {
+                Text("Faltam " + String(format: "%.2f", appController.countdownTimer).replacingOccurrences(of: ".", with: ":") + " min           ")
+                
                 CountdownBar()
             }
         }
@@ -49,6 +53,7 @@ struct NotificationCard: View {
 struct NotificationCard_Previews: PreviewProvider {
     static var previews: some View {
         NotificationCard()
+            .previewDevice("iPhone 12")
             .environmentObject(AppController())
     }
 }
