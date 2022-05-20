@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		791AC8162836A956009E6BEE /* NotificationBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791AC8152836A956009E6BEE /* NotificationBanner.swift */; };
 		7921985D282F272B00DEA3D2 /* notificaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921985C282F272B00DEA3D2 /* notificaApp.swift */; };
 		7921985F282F272B00DEA3D2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921985E282F272B00DEA3D2 /* MainView.swift */; };
 		79219861282F272C00DEA3D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79219860282F272C00DEA3D2 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		791AC8152836A956009E6BEE /* NotificationBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBanner.swift; sourceTree = "<group>"; };
 		79219859282F272B00DEA3D2 /* notifica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notifica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7921985C282F272B00DEA3D2 /* notificaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notificaApp.swift; sourceTree = "<group>"; };
 		7921985E282F272B00DEA3D2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				7978791C283074840074B2A5 /* CustomColors.swift */,
 				7978791F283089050074B2A5 /* CustomTabBar.swift */,
+				791AC8152836A956009E6BEE /* NotificationBanner.swift */,
 				798E0BDD2835402A00E68EDA /* NotificationCard.swift */,
 				798E0BDF28354B0500E68EDA /* CountdownBar.swift */,
 				79B7F16828330F6C001DE585 /* ValidateTextField.swift */,
@@ -186,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7921986E282F27C300DEA3D2 /* TeamView.swift in Sources */,
+				791AC8162836A956009E6BEE /* NotificationBanner.swift in Sources */,
 				798E0BDE2835402A00E68EDA /* NotificationCard.swift in Sources */,
 				7978791D283074840074B2A5 /* CustomColors.swift in Sources */,
 				7921985F282F272B00DEA3D2 /* MainView.swift in Sources */,
