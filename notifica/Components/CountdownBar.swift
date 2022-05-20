@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct CountdownBar: View {
-    let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 0.05, on: .main, in: .common).autoconnect()
     @EnvironmentObject var appController: AppController
 
 var body: some View {
@@ -19,6 +19,9 @@ var body: some View {
                     .onReceive(timer) { _ in // start animation
                         if appController.countdownTimer < 1.0 {
                             appController.countdownTimer += 0.01
+                        } else {
+                            appController.showNotificationBanner = true
+                            appController.countdownTimer = 0.0
                         }
                     }
                 }

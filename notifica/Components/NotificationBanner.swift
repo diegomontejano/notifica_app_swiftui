@@ -10,18 +10,19 @@ struct NotificationBannerModifier: ViewModifier {
             if show {
                 // banner
                 VStack {
-                    Spacer()
-                    
                     HStack{
                         Image(systemName: "bell.badge")
                             .padding(.vertical)
                         Text("Lorem ipsum...")
+                            .fontWeight(.bold)
                     }
                     .frame(minWidth: 0, maxWidth: .infinity)
-                    .background(.orange)
-                    .cornerRadius(5)
+                    .background(.white)
+                    .cornerRadius(10)
                     .shadow(radius: 5)
                     .padding()
+                    
+                    Spacer()
                 }
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
@@ -44,12 +45,14 @@ extension View {
     }
 }
 
+
+
 // test view
 struct TestView: View {
     @EnvironmentObject var appController: AppController
     
     var body: some View {
-        Text("Test View")
+        Text("Test View (click here)")
             .notificationBanner(show: $appController.showNotificationBanner)
             .onTapGesture {
                 appController.showNotificationBanner = true
@@ -58,7 +61,10 @@ struct TestView: View {
 }
 struct TestView_Previews: PreviewProvider {
     static var previews: some View {
-        TestView()
-            .environmentObject(AppController())
+        ZStack {
+            Color.orange
+            TestView()
+                .environmentObject(AppController())
+        }
     }
 }
