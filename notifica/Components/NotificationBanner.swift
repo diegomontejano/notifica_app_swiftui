@@ -46,13 +46,13 @@ extension View {
 
 // test view
 struct TestView: View {
-    @State var showNotificationBanner = false
+    @EnvironmentObject var appController: AppController
     
     var body: some View {
-        Text("Hello World!")
-            .notificationBanner(show: $showNotificationBanner)
+        Text("Test View")
+            .notificationBanner(show: $appController.showNotificationBanner)
             .onTapGesture {
-                showNotificationBanner = true
+                appController.showNotificationBanner = true
             }
     }
 }
