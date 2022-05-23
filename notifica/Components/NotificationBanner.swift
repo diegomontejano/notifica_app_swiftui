@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct NotificationBannerModifier: ViewModifier {
-    let duration: TimeInterval = 3
     @Binding var show: Bool
     
     func body(content: Content) -> some View {
@@ -30,7 +29,7 @@ struct NotificationBannerModifier: ViewModifier {
                     Spacer()
                 }
                 .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                         withAnimation {
                             show = false
                         }
