@@ -24,6 +24,7 @@ var body: some View {
                         } else {
                             appController.showNotificationBanner = true
                             appController.countdownTimer = 100.0
+                            progressBar = 0.0
                         }
                     }
                 }
