@@ -11,12 +11,17 @@ struct NotificationBannerModifier: ViewModifier {
                 // banner
                 VStack {
                     HStack{
-                        Image(systemName: "bell.badge")
-                            .padding(.vertical)
-                        Text("Lorem ipsum...")
-                            .fontWeight(.bold)
+                        VStack(alignment: .leading) {
+                            Text("IU Conecta")
+                                .fontWeight(.heavy)
+                            Text("Seu horário terminará em 5 minutos!")
+                                .fontWeight(.medium)
+                        }
+                        .padding()
+                        Spacer()
                     }
-                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .frame(maxWidth: .infinity)
+                    .foregroundColor(.orange)
                     .background(.white)
                     .cornerRadius(10)
                     .shadow(radius: 5)
