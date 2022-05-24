@@ -1,19 +1,20 @@
 import SwiftUI
 
-struct NotificationBannerModifier: ViewModifier {
-    @Binding var show: Bool
-    
+struct NotificationBanner: ViewModifier {
+    @Binding var mostrarBanner: Bool
+    @Binding var notificarQuandoFaltar: Int
+        
     func body(content: Content) -> some View {
         ZStack{
             content
-            if show {
+            if mostrarBanner {
                 // banner
                 VStack {
                     HStack{
                         VStack(alignment: .leading) {
                             Text("IU Conecta")
                                 .fontWeight(.heavy)
-                            Text("Seu horário terminará em 5 minutos!")
+                            Text("Seu horário terminará em \(String(notificarQuandoFaltar)) minutos!")
                                 .fontWeight(.medium)
                         }
                         .padding()
@@ -31,7 +32,7 @@ struct NotificationBannerModifier: ViewModifier {
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                         withAnimation {
-                            show = false
+                            mostrarBanner = false
                         }
                     }
                 }
@@ -44,8 +45,8 @@ struct NotificationBannerModifier: ViewModifier {
 }
 
 extension View {
-    func notificationBanner(show: Binding<Bool>) -> some View {
-        modifier(NotificationBannerModifier(show: show))
+    func notificationBanner(mostrarBanner: Binding<Bool>, notificarQuandoFaltar: Binding<Int>) -> some View {
+        modifier(NotificationBanner(mostrarBanner: mostrarBanner, notificarQuandoFaltar: notificarQuandoFaltar))
     }
 }
 
@@ -57,9 +58,9 @@ struct TestView: View {
     
     var body: some View {
         Text("Test View (click here)")
-            .notificationBanner(show: $appController.showNotificationBanner)
+            .notificationBanner(mostrarBanner: $appController.mostrarBanner, notificarQuandoFaltar: $appController.notificarQuandoFaltar)
             .onTapGesture {
-                appController.showNotificationBanner = true
+                appController.mostrarBanner = true
             }
     }
 }

@@ -1,12 +1,12 @@
 import SwiftUI
 
 struct PontoView: View {
+    @EnvironmentObject var appController: AppController
+    
     var body: some View {
         VStack(alignment: .leading) {
-            // MARK: TabBar
             CustomTabBar()
             
-            // MARK: Body
             VStack(alignment: .leading){
                 Text("Ponto eletrônico")
                     .font(.title3)
@@ -14,13 +14,12 @@ struct PontoView: View {
                     .padding(.vertical, 10)
                 
                 NotificationCard()
-
             }
             .padding(.horizontal, 20)
             Spacer()
         }
-        
-        
+        .onAppear {self.appController.simulateTimer()}
+        .notificationBanner(mostrarBanner: $appController.mostrarBanner, notificarQuandoFaltar: $appController.notificarQuandoFaltar)
     }
 }
 

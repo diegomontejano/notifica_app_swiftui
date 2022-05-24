@@ -7,36 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		791AC8162836A956009E6BEE /* NotificationBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791AC8152836A956009E6BEE /* NotificationBanner.swift */; };
+		791AC8162836A956009E6BEE /* notification_banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791AC8152836A956009E6BEE /* notification_banner.swift */; };
 		7921985D282F272B00DEA3D2 /* notificaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921985C282F272B00DEA3D2 /* notificaApp.swift */; };
-		7921985F282F272B00DEA3D2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921985E282F272B00DEA3D2 /* MainView.swift */; };
+		7921985F282F272B00DEA3D2 /* main_view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921985E282F272B00DEA3D2 /* main_view.swift */; };
 		79219861282F272C00DEA3D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79219860282F272C00DEA3D2 /* Assets.xcassets */; };
 		79219864282F272C00DEA3D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79219863282F272C00DEA3D2 /* Preview Assets.xcassets */; };
-		7921986C282F27B600DEA3D2 /* PontoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921986B282F27B600DEA3D2 /* PontoView.swift */; };
-		7921986E282F27C300DEA3D2 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921986D282F27C300DEA3D2 /* TeamView.swift */; };
-		7978791D283074840074B2A5 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7978791C283074840074B2A5 /* CustomColors.swift */; };
-		79787920283089050074B2A5 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7978791F283089050074B2A5 /* CustomTabBar.swift */; };
-		798E0BDE2835402A00E68EDA /* NotificationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E0BDD2835402A00E68EDA /* NotificationCard.swift */; };
-		798E0BE028354B0500E68EDA /* CountdownBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E0BDF28354B0500E68EDA /* CountdownBar.swift */; };
-		79B7F16928330F6C001DE585 /* ValidateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B7F16828330F6C001DE585 /* ValidateTextField.swift */; };
-		79DB318A2832F41200B458CC /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DB31892832F41200B458CC /* AppController.swift */; };
+		7921986C282F27B600DEA3D2 /* ponto_view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921986B282F27B600DEA3D2 /* ponto_view.swift */; };
+		7921986E282F27C300DEA3D2 /* team_view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921986D282F27C300DEA3D2 /* team_view.swift */; };
+		7978791D283074840074B2A5 /* custom_colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7978791C283074840074B2A5 /* custom_colors.swift */; };
+		79787920283089050074B2A5 /* custom_tabview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7978791F283089050074B2A5 /* custom_tabview.swift */; };
+		798E0BDE2835402A00E68EDA /* notification_card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E0BDD2835402A00E68EDA /* notification_card.swift */; };
+		798E0BE028354B0500E68EDA /* progress_bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E0BDF28354B0500E68EDA /* progress_bar.swift */; };
+		79DB318A2832F41200B458CC /* app_controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DB31892832F41200B458CC /* app_controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		791AC8152836A956009E6BEE /* NotificationBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBanner.swift; sourceTree = "<group>"; };
+		791AC8152836A956009E6BEE /* notification_banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notification_banner.swift; sourceTree = "<group>"; };
 		79219859282F272B00DEA3D2 /* notifica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notifica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7921985C282F272B00DEA3D2 /* notificaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notificaApp.swift; sourceTree = "<group>"; };
-		7921985E282F272B00DEA3D2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		7921985E282F272B00DEA3D2 /* main_view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main_view.swift; sourceTree = "<group>"; };
 		79219860282F272C00DEA3D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79219863282F272C00DEA3D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		7921986B282F27B600DEA3D2 /* PontoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoView.swift; sourceTree = "<group>"; };
-		7921986D282F27C300DEA3D2 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
-		7978791C283074840074B2A5 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
-		7978791F283089050074B2A5 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
-		798E0BDD2835402A00E68EDA /* NotificationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCard.swift; sourceTree = "<group>"; };
-		798E0BDF28354B0500E68EDA /* CountdownBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownBar.swift; sourceTree = "<group>"; };
-		79B7F16828330F6C001DE585 /* ValidateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateTextField.swift; sourceTree = "<group>"; };
-		79DB31892832F41200B458CC /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		7921986B282F27B600DEA3D2 /* ponto_view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ponto_view.swift; sourceTree = "<group>"; };
+		7921986D282F27C300DEA3D2 /* team_view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = team_view.swift; sourceTree = "<group>"; };
+		7978791C283074840074B2A5 /* custom_colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = custom_colors.swift; sourceTree = "<group>"; };
+		7978791F283089050074B2A5 /* custom_tabview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = custom_tabview.swift; sourceTree = "<group>"; };
+		798E0BDD2835402A00E68EDA /* notification_card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notification_card.swift; sourceTree = "<group>"; };
+		798E0BDF28354B0500E68EDA /* progress_bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = progress_bar.swift; sourceTree = "<group>"; };
+		79DB31892832F41200B458CC /* app_controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = app_controller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,9 +88,9 @@
 		7921986A282F27A400DEA3D2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7921985E282F272B00DEA3D2 /* MainView.swift */,
-				7921986B282F27B600DEA3D2 /* PontoView.swift */,
-				7921986D282F27C300DEA3D2 /* TeamView.swift */,
+				7921985E282F272B00DEA3D2 /* main_view.swift */,
+				7921986B282F27B600DEA3D2 /* ponto_view.swift */,
+				7921986D282F27C300DEA3D2 /* team_view.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -100,12 +98,11 @@
 		7978791E283074880074B2A5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				7978791C283074840074B2A5 /* CustomColors.swift */,
-				7978791F283089050074B2A5 /* CustomTabBar.swift */,
-				791AC8152836A956009E6BEE /* NotificationBanner.swift */,
-				798E0BDD2835402A00E68EDA /* NotificationCard.swift */,
-				798E0BDF28354B0500E68EDA /* CountdownBar.swift */,
-				79B7F16828330F6C001DE585 /* ValidateTextField.swift */,
+				798E0BDD2835402A00E68EDA /* notification_card.swift */,
+				798E0BDF28354B0500E68EDA /* progress_bar.swift */,
+				791AC8152836A956009E6BEE /* notification_banner.swift */,
+				7978791F283089050074B2A5 /* custom_tabview.swift */,
+				7978791C283074840074B2A5 /* custom_colors.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -113,7 +110,7 @@
 		79DB318B2832F41500B458CC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				79DB31892832F41200B458CC /* AppController.swift */,
+				79DB31892832F41200B458CC /* app_controller.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -188,17 +185,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7921986E282F27C300DEA3D2 /* TeamView.swift in Sources */,
-				791AC8162836A956009E6BEE /* NotificationBanner.swift in Sources */,
-				798E0BDE2835402A00E68EDA /* NotificationCard.swift in Sources */,
-				7978791D283074840074B2A5 /* CustomColors.swift in Sources */,
-				7921985F282F272B00DEA3D2 /* MainView.swift in Sources */,
-				7921986C282F27B600DEA3D2 /* PontoView.swift in Sources */,
-				798E0BE028354B0500E68EDA /* CountdownBar.swift in Sources */,
+				7921986E282F27C300DEA3D2 /* team_view.swift in Sources */,
+				791AC8162836A956009E6BEE /* notification_banner.swift in Sources */,
+				798E0BDE2835402A00E68EDA /* notification_card.swift in Sources */,
+				7978791D283074840074B2A5 /* custom_colors.swift in Sources */,
+				7921985F282F272B00DEA3D2 /* main_view.swift in Sources */,
+				7921986C282F27B600DEA3D2 /* ponto_view.swift in Sources */,
+				798E0BE028354B0500E68EDA /* progress_bar.swift in Sources */,
 				7921985D282F272B00DEA3D2 /* notificaApp.swift in Sources */,
-				79B7F16928330F6C001DE585 /* ValidateTextField.swift in Sources */,
-				79787920283089050074B2A5 /* CustomTabBar.swift in Sources */,
-				79DB318A2832F41200B458CC /* AppController.swift in Sources */,
+				79787920283089050074B2A5 /* custom_tabview.swift in Sources */,
+				79DB318A2832F41200B458CC /* app_controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

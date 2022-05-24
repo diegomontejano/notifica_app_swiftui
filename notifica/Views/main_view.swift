@@ -1,8 +1,6 @@
 import SwiftUI
 
 struct MainView: View {
-    @EnvironmentObject var appController: AppController
-    
     init(){
         UITabBar.appearance().backgroundColor = UIColor.grayColor1 // background
         UITabBar.appearance().unselectedItemTintColor = UIColor.grayColor3 // unselected
@@ -29,7 +27,6 @@ struct MainView: View {
                 .tag(1)
         }
         .accentColor(.orange) // accent
-        .notificationBanner(show: $appController.showNotificationBanner)
     }
 }
 
