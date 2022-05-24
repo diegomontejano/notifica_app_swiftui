@@ -4,7 +4,6 @@ struct TeamView: View {
     var body: some View {
         VStack(alignment: .center) {
             CustomTabBar()
-            
             Spacer()
             Text("Team view")
             Spacer()

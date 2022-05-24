@@ -6,20 +6,18 @@ struct PontoView: View {
     var body: some View {
         VStack(alignment: .leading) {
             CustomTabBar()
-            
-            VStack(alignment: .leading){
+            VStack(alignment: .leading) {
                 Text("Ponto eletrônico")
                     .font(.title3)
                     .fontWeight(.bold)
                     .padding(.vertical, 10)
-                
                 NotificationCard()
             }
             .padding(.horizontal, 20)
             Spacer()
         }
-        .onAppear {self.appController.simulateTimer()}
-        .notificationBanner(mostrarBanner: $appController.mostrarBanner, notificarQuandoFaltar: $appController.notificarQuandoFaltar)
+        .onAppear { self.appController.simulateTimer() }
+        .notificationBanner()
     }
 }
 

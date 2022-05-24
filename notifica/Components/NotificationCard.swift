@@ -4,14 +4,14 @@ struct NotificationCard: View {
     @EnvironmentObject var appController: AppController
     
     var body: some View {
-        VStack(spacing: 10){
-            // toggle button
-            HStack{
+        VStack(spacing: 10) {
+            // habilitar notificações
+            HStack {
                 Toggle("Habilitar notificações", isOn:  $appController.habilitarNotificacoes)
                     .toggleStyle(SwitchToggleStyle(tint: .orange))
             }
             Divider()
-            // minutes picker
+            // notificar quando faltar
             HStack {
                 Text("Notificar quando faltar")
                 Spacer()
@@ -25,7 +25,7 @@ struct NotificationCard: View {
                 }
             }
             Divider()
-            // workload picker
+            // carga horária diária
             HStack {
                 Text("Carga horária diária    ")
                 Picker("cargaHoraria", selection: $appController.cargaHorariaDiaria) {
@@ -36,10 +36,23 @@ struct NotificationCard: View {
                 .pickerStyle(SegmentedPickerStyle())
             }
             Divider()
-            // countdown timer
+            // faltam xx:xx min
             HStack(alignment: .center) {
                 Text("Faltam " + String(format: "%.2f", appController.countdownTimer).replacingOccurrences(of: ".", with: ":") + " min           ")
-                ProgressBar()
+                // progress bar
+                ZStack {
+                    GeometryReader { geo in
+                        Rectangle()
+                            .frame(width: geo.size.width, height: 8)
+                            .foregroundColor(.grayColor2)
+                            .cornerRadius(10)
+                        Rectangle()
+                            .frame(width: geo.size.width*appController.progressBar, height: 8)
+                            .foregroundColor(.orange)
+                            .cornerRadius(10)
+                        }
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: 10)
             }
         }
         .padding()
@@ -52,7 +65,6 @@ struct NotificationCard: View {
 struct NotificationCard_Previews: PreviewProvider {
     static var previews: some View {
         NotificationCard()
-            .previewDevice("iPhone 12")
             .environmentObject(AppController())
     }
 }

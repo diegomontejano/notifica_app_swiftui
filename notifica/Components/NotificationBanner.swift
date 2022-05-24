@@ -1,20 +1,19 @@
 import SwiftUI
 
 struct NotificationBanner: ViewModifier {
-    @Binding var mostrarBanner: Bool
-    @Binding var notificarQuandoFaltar: Int
+    @EnvironmentObject var appController: AppController
         
     func body(content: Content) -> some View {
         ZStack{
             content
-            if mostrarBanner {
-                // banner
+            if appController.showBanner {
+                // notification banner
                 VStack {
-                    HStack{
+                    HStack {
                         VStack(alignment: .leading) {
                             Text("IU Conecta")
                                 .fontWeight(.heavy)
-                            Text("Seu horário terminará em \(String(notificarQuandoFaltar)) minutos!")
+                            Text("Seu horário terminará em \(String(appController.notificarQuandoFaltar)) minutos!")
                                 .fontWeight(.medium)
                         }
                         .padding()
@@ -26,49 +25,46 @@ struct NotificationBanner: ViewModifier {
                     .cornerRadius(10)
                     .shadow(radius: 5)
                     .padding()
-                    
                     Spacer()
                 }
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                         withAnimation {
-                            mostrarBanner = false
+                            appController.showBanner = false
                         }
                     }
                 }
-                
-                
-
             }
         }
     }
 }
 
 extension View {
-    func notificationBanner(mostrarBanner: Binding<Bool>, notificarQuandoFaltar: Binding<Int>) -> some View {
-        modifier(NotificationBanner(mostrarBanner: mostrarBanner, notificarQuandoFaltar: notificarQuandoFaltar))
+    func notificationBanner() -> some View {
+        modifier(NotificationBanner())
     }
 }
 
 
 
-// test view
-struct TestView: View {
+// MARK: Test View
+struct TestNotificationBanner: View {
     @EnvironmentObject var appController: AppController
     
     var body: some View {
-        Text("Test View (click here)")
-            .notificationBanner(mostrarBanner: $appController.mostrarBanner, notificarQuandoFaltar: $appController.notificarQuandoFaltar)
+        Text("Test Notification Banner (click here)")
+            .notificationBanner()
             .onTapGesture {
-                appController.mostrarBanner = true
+                appController.showBanner = true
             }
     }
 }
-struct TestView_Previews: PreviewProvider {
+
+struct TestNotificationBanner_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.orange
-            TestView()
+            TestNotificationBanner()
                 .environmentObject(AppController())
         }
     }

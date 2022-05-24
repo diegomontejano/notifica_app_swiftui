@@ -2,8 +2,8 @@ import SwiftUI
 
 struct CustomTabBar: View {
     var body: some View {
-        VStack{
-            VStack{
+        VStack {
+            VStack {
                 HStack(alignment: .center, spacing: 15) {
                     Image(systemName: "person.crop.circle.fill")
                         .font(.system(size: 45))
