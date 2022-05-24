@@ -6,7 +6,7 @@ struct NotificationBanner: ViewModifier {
     func body(content: Content) -> some View {
         ZStack{
             content
-            if appController.showBanner {
+            if appController.showNotificationBanner {
                 // notification banner
                 VStack {
                     HStack {
@@ -30,7 +30,7 @@ struct NotificationBanner: ViewModifier {
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                         withAnimation {
-                            appController.showBanner = false
+                            appController.showNotificationBanner = false
                         }
                     }
                 }
@@ -55,7 +55,7 @@ struct TestNotificationBanner: View {
         Text("Test Notification Banner (click here)")
             .notificationBanner()
             .onTapGesture {
-                appController.showBanner = true
+                appController.showNotificationBanner = true
             }
     }
 }

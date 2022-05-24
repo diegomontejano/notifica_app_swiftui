@@ -3,12 +3,13 @@ import SwiftUI
 
 class AppController: ObservableObject {
     // properties of NotificationCard()
+    @Published var showNotificationBanner: Bool = false
     @Published var habilitarNotificacoes: Bool = true
     @Published var notificarQuandoFaltar: Int = 5
     @Published var cargaHorariaDiaria: Int = 8
     @Published var countdownTimer: Double = 100.0
     @Published var progressBar: Double = 0.0
-    @Published var showBanner: Bool = false
+
     
     // runned on load PontoView()
     func simulateTimer(){
@@ -17,7 +18,7 @@ class AppController: ObservableObject {
                 self.countdownTimer -= 1.0
                 self.progressBar += 0.01
             } else {
-                self.showBanner = true
+                self.showNotificationBanner = true
                 self.countdownTimer = 100.0
                 self.progressBar = 0.0
             }
