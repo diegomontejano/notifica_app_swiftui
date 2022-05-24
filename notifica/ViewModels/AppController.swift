@@ -10,7 +10,6 @@ class AppController: ObservableObject {
     @Published var countdownTimer: Double = 100.0
     @Published var progressBar: Double = 0.0
 
-    
     // runned on load PontoView()
     func simulateTimer(){
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
@@ -22,7 +21,6 @@ class AppController: ObservableObject {
                 self.countdownTimer = 100.0
                 self.progressBar = 0.0
             }
-        
             self.simulateTimer()
         }
     }
