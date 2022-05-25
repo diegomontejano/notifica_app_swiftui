@@ -12,13 +12,13 @@ struct CustomTabBar: View {
                         .font(.system(size: 20, weight: .bold))
                     Image(systemName: "magnifyingglass")
                         .font(.system(size: 20, weight: .bold))
-                    Image(systemName: "bell.badge")
+                    Image(systemName: "bell.fill")
                         .font(.system(size: 20, weight: .bold))
                 }
                 .padding(.horizontal, 10)
                 
                 HStack {
-                    Text("Ponto")
+                    Text("ponto")
                         .font(.title2)
                         .fontWeight(.bold)
                     Spacer()
