@@ -11,7 +11,7 @@ class AppController: ObservableObject {
     var counterToMinutes: String {
         let currentTime = cargaHorariaDiaria - counter
         let seconds = currentTime % 60
-        let minutes = Int(currentTime / 60)
+        let minutes = currentTime / 60
         return "\(minutes)h e \(seconds < 10 ? "0" : "")\(seconds)min"
     }
     
