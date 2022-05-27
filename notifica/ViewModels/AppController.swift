@@ -2,26 +2,39 @@ import Foundation
 import SwiftUI
 
 class AppController: ObservableObject {
-    // properties of NotificationCard()
     @Published var showNotificationBanner: Bool = false
-    @Published var habilitarNotificacoes: Bool = true
+    @Published var enableNotificationBanner: Bool = true
     @Published var notificarQuandoFaltar: Int = 5
-    @Published var cargaHorariaDiaria: Int = 8
-    @Published var countdownTimer: Double = 100.0
-    @Published var progressBar: Double = 0.0
-
-    // runned on load PontoView()
-    func simulateTimer(){
+    @Published var cargaHorariaDiaria: Int = 240
+    @Published var counter: Int = 0
+    
+    var counterToMinutes: String {
+        let currentTime = cargaHorariaDiaria - counter
+        let seconds = currentTime % 60
+        let minutes = Int(currentTime / 60)
+        return "\(minutes)h e \(seconds < 10 ? "0" : "")\(seconds)min"
+    }
+    
+    var progressBar: Double {
+        return (Double(counter) / Double(cargaHorariaDiaria))
+    }
+    
+    func simulateTimer() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-            if self.countdownTimer > 0.0 {
-                self.countdownTimer -= 1.0
-                self.progressBar += 0.01
+            if self.counter < self.cargaHorariaDiaria {
+                self.counter += 1
+                self.simulateNotificationBanner()
             } else {
-                self.showNotificationBanner = true
-                self.countdownTimer = 100.0
-                self.progressBar = 0.0
+                self.counter = 0
             }
             self.simulateTimer()
+        }
+    }
+    
+    func simulateNotificationBanner() {
+        if self.enableNotificationBanner == true && counterToMinutes.contains("0h e \(String(notificarQuandoFaltar))min")
+            || self.enableNotificationBanner == true && counterToMinutes == "0h e 05min" {
+            self.showNotificationBanner = true
         }
     }
 }

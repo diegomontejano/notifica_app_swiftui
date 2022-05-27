@@ -7,7 +7,7 @@ struct NotificationCard: View {
         VStack(spacing: 10) {
             // habilitar notificações
             HStack {
-                Toggle("Habilitar notificações", isOn:  $appController.habilitarNotificacoes)
+                Toggle("Habilitar notificações", isOn:  $appController.enableNotificationBanner)
                     .toggleStyle(SwitchToggleStyle(tint: .orange))
             }
             Divider()
@@ -20,8 +20,6 @@ struct NotificationCard: View {
                     Text("10 minutos").tag(10)
                     Text("15 minutos").tag(15)
                     Text("30 minutos").tag(30)
-                    Text("45 minutos").tag(45)
-                    Text("60 minutos").tag(60)
                 }
             }
             Divider()
@@ -29,16 +27,16 @@ struct NotificationCard: View {
             HStack {
                 Text("Carga horária diária    ")
                 Picker("cargaHoraria", selection: $appController.cargaHorariaDiaria) {
-                    Text("4").tag(4)
-                    Text("6").tag(6)
-                    Text("8").tag(8)
+                    Text("4").tag(240)
+                    Text("6").tag(360)
+                    Text("8").tag(480)
                 }
                 .pickerStyle(SegmentedPickerStyle())
             }
             Divider()
-            // faltam xx:xx min
+            // faltam 4h e 00min
             HStack(alignment: .center) {
-                Text("Faltam " + String(format: "%.2f", appController.countdownTimer).replacingOccurrences(of: ".", with: ":") + " min           ")
+                Text("Faltam \(appController.counterToMinutes)        ")
                 // progress bar
                 ZStack {
                     GeometryReader { geo in
