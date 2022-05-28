@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct PontoView: View {
-    @EnvironmentObject var appController: AppController
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -16,8 +15,6 @@ struct PontoView: View {
             .padding(.horizontal, 20)
             Spacer()
         }
-        .onAppear { self.appController.simulateTimer() }
-        .notificationBanner()
     }
 }
 

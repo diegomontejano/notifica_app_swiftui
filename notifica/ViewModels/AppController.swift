@@ -19,6 +19,7 @@ class AppController: ObservableObject {
         return (Double(counter) / Double(cargaHorariaDiaria))
     }
     
+    // runned on load MainView()
     func simulateTimer() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
             if self.counter < self.cargaHorariaDiaria {
