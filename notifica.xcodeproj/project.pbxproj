@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		791AC8162836A956009E6BEE /* NotificationBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791AC8152836A956009E6BEE /* NotificationBanner.swift */; };
 		7921985D282F272B00DEA3D2 /* notificaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921985C282F272B00DEA3D2 /* notificaApp.swift */; };
-		7921985F282F272B00DEA3D2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921985E282F272B00DEA3D2 /* MainView.swift */; };
+		7921985F282F272B00DEA3D2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921985E282F272B00DEA3D2 /* HomeView.swift */; };
 		79219861282F272C00DEA3D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79219860282F272C00DEA3D2 /* Assets.xcassets */; };
 		79219864282F272C00DEA3D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79219863282F272C00DEA3D2 /* Preview Assets.xcassets */; };
 		7921986C282F27B600DEA3D2 /* PontoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921986B282F27B600DEA3D2 /* PontoView.swift */; };
@@ -17,6 +17,7 @@
 		79787920283089050074B2A5 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7978791F283089050074B2A5 /* CustomTabBar.swift */; };
 		7980EE3128412EFF00E318EB /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7980EE3028412EFF00E318EB /* TeamView.swift */; };
 		798E0BDE2835402A00E68EDA /* NotificationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E0BDD2835402A00E68EDA /* NotificationCard.swift */; };
+		79DB038A2841A76300CCFA6E /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DB03892841A76300CCFA6E /* SplashScreen.swift */; };
 		79DB318A2832F41200B458CC /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DB31892832F41200B458CC /* AppController.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +25,7 @@
 		791AC8152836A956009E6BEE /* NotificationBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBanner.swift; sourceTree = "<group>"; };
 		79219859282F272B00DEA3D2 /* notifica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notifica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7921985C282F272B00DEA3D2 /* notificaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notificaApp.swift; sourceTree = "<group>"; };
-		7921985E282F272B00DEA3D2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		7921985E282F272B00DEA3D2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		79219860282F272C00DEA3D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79219863282F272C00DEA3D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7921986B282F27B600DEA3D2 /* PontoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoView.swift; sourceTree = "<group>"; };
@@ -32,6 +33,7 @@
 		7978791F283089050074B2A5 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		7980EE3028412EFF00E318EB /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 		798E0BDD2835402A00E68EDA /* NotificationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCard.swift; sourceTree = "<group>"; };
+		79DB03892841A76300CCFA6E /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		79DB31892832F41200B458CC /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +88,8 @@
 		7921986A282F27A400DEA3D2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7921985E282F272B00DEA3D2 /* MainView.swift */,
+				79DB03892841A76300CCFA6E /* SplashScreen.swift */,
+				7921985E282F272B00DEA3D2 /* HomeView.swift */,
 				7921986B282F27B600DEA3D2 /* PontoView.swift */,
 				7980EE3028412EFF00E318EB /* TeamView.swift */,
 			);
@@ -182,10 +185,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79DB038A2841A76300CCFA6E /* SplashScreen.swift in Sources */,
 				791AC8162836A956009E6BEE /* NotificationBanner.swift in Sources */,
 				798E0BDE2835402A00E68EDA /* NotificationCard.swift in Sources */,
 				7978791D283074840074B2A5 /* CustomColors.swift in Sources */,
-				7921985F282F272B00DEA3D2 /* MainView.swift in Sources */,
+				7921985F282F272B00DEA3D2 /* HomeView.swift in Sources */,
 				7921986C282F27B600DEA3D2 /* PontoView.swift in Sources */,
 				7921985D282F272B00DEA3D2 /* notificaApp.swift in Sources */,
 				79787920283089050074B2A5 /* CustomTabBar.swift in Sources */,
