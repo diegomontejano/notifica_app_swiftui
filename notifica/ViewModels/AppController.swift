@@ -3,7 +3,7 @@ import SwiftUI
 
 class AppController: ObservableObject {
     @Published var showNotificationBanner: Bool = false
-    @Published var enableNotificationBanner: Bool = true
+    @Published var enableNotificationBanner: Bool = false
     @Published var notificarQuandoFaltar: Int = 5
     @Published var cargaHorariaDiaria: Int = 240
     @Published var counter: Int = 0

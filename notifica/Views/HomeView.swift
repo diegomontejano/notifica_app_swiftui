@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct MainView: View {
+struct HomeView: View {
     @EnvironmentObject var appController: AppController
     
     init() {
@@ -34,9 +34,9 @@ struct MainView: View {
     }
 }
 
-struct MainView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        HomeView()
             .environmentObject(AppController())
     }
 }
