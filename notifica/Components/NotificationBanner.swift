@@ -11,22 +11,27 @@ struct NotificationBanner: ViewModifier {
                 VStack {
                     HStack {
                         Spacer()
+                        // app icon
                         Image("app-icon")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 40, height: 40)
                         VStack(alignment: .leading) {
                             HStack {
+                                // notification title
                                 Text("IU Conecta")
                                     .fontWeight(.bold)
                                 Spacer()
+                                // notification time
                                 Text("agora") 
                                     .fontWeight(.regular)
                                     .font(.system(size: 14))
                                     .foregroundColor(.grayColor4)
                             }
+                            // notification subtitle
                             Text("Seu horário terminará em \(String(appController.notificarQuandoFaltar)) minutos")
                                 .fontWeight(.bold)
+                            // notification body
                             Text("Evite telemetria, prepare-se para passar o ponto!")
                                 .fontWeight(.regular)
                         }
