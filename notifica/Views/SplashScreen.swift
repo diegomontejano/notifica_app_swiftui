@@ -25,6 +25,7 @@ struct SplashScreen: View {
                             .padding(119)
                             // move notifica [3]
                             .offset(x: animationBoolValue[3] ? 41 : -80, y: 56)
+                            .opacity(animationBoolValue[3] ? 1 : 0)
                     }
                 }
                 // remove SplashScreen() [4]
