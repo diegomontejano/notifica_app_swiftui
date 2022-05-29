@@ -5,8 +5,8 @@ My original app for help my colleagues to punch the clock at the right time. Tec
 * UX/UI Design,
 * SOLID Principles,
 * MVVM Architectural Pattern,
-* Local Notifications Alerts,
 * API Rest/Restful Operations,
 * Firebase Authentication,
 * Firebase Cloud Firestore,
-* Cached Network Image.
+* Cached Network Image,
+* Local Notifications Alerts.
