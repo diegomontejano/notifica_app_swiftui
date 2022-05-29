@@ -1,6 +1,6 @@
 # Notifica App (under development)
 
-My original app for help my colleagues to punch the clock at the right time.Technologies and knowledge used:
+My original app for help my colleagues to punch the clock at the right time. Technologies and knowledge used:
 * SwiftUI,
 * UX/UI Design,
 * SOLID Principles,
