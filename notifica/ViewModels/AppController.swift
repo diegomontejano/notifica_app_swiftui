@@ -52,9 +52,9 @@ class AppController: ObservableObject {
         }
     
         let notificationContent = UNMutableNotificationContent()
-        notificationContent.title = "UI Conecta"
+        notificationContent.title = "IU Conecta"
         notificationContent.subtitle = "Seu horário terminará em \(String(notificarQuandoFaltar)) minutos"
-        notificationContent.body = "Evite telemetria, prepare-se para passar o ponto"
+        notificationContent.body = "Evite telemetria, prepare-se para passar o ponto!"
         notificationContent.badge = 1
         notificationContent.sound = UNNotificationSound.default
 

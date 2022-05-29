@@ -27,7 +27,7 @@ struct NotificationBanner: ViewModifier {
                             }
                             Text("Seu horário terminará em \(String(appController.notificarQuandoFaltar)) minutos")
                                 .fontWeight(.bold)
-                            Text("Evite telemetria, prepare-se para passar o ponto")
+                            Text("Evite telemetria, prepare-se para passar o ponto!")
                                 .fontWeight(.regular)
                         }
                         .padding(.vertical, 10)
