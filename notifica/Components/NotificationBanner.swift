@@ -20,7 +20,7 @@ struct NotificationBanner: ViewModifier {
                                 Text("IU Conecta")
                                     .fontWeight(.bold)
                                 Spacer()
-                                Text("agora")
+                                Text("agora") 
                                     .fontWeight(.regular)
                                     .font(.system(size: 14))
                                     .foregroundColor(.grayColor4)
