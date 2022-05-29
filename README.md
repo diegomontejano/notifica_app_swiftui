@@ -8,5 +8,4 @@ My original app for help my colleagues to punch the clock at the right time. Tec
 * API Rest/Restful Operations,
 * Firebase Authentication,
 * Firebase Cloud Firestore,
-* Cached Network Image,
 * Local Notifications Alerts.
