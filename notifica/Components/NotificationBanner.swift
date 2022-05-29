@@ -11,10 +11,10 @@ struct NotificationBanner: ViewModifier {
                 VStack {
                     HStack {
                         Spacer()
-                        Rectangle()
+                        Image("app-icon")
+                            .resizable()
+                            .scaledToFit()
                             .frame(width: 40, height: 40)
-                            .cornerRadius(10)
-                            .foregroundColor(.grayColor3)
                         VStack(alignment: .leading) {
                             HStack {
                                 Text("IU Conecta")
@@ -34,10 +34,8 @@ struct NotificationBanner: ViewModifier {
                         Spacer()
                     }
                     .frame(maxWidth: .infinity)
-                    .background(.white)
+                    .background(.ultraThinMaterial)
                     .cornerRadius(20)
-                    .opacity(0.9)
-                    .shadow(radius: 5)
                     .font(.system(size: 16))
                     .padding(8)
                     Spacer()

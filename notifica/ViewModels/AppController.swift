@@ -36,32 +36,21 @@ class AppController: ObservableObject {
     func simulateNotificationBanner() {
         if self.enableNotificationBanner == true && counterToMinutes.contains("0h e \(String(notificarQuandoFaltar))min")
             || self.enableNotificationBanner == true && counterToMinutes == "0h e 05min" {
-             self.showNotificationBanner = true
+            self.showNotificationBanner = true
             self.realNotificationBanner()
         }
     }
     
     func realNotificationBanner() {
-        // request user authorization for app notifications
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) {success, error in
-            if success {
-                print("Notification allowed")
-            } else if let error = error {
-                print(error.localizedDescription)
-            }
-        }
-    
-        let notificationContent = UNMutableNotificationContent()
-        notificationContent.title = "IU Conecta"
-        notificationContent.subtitle = "Seu horário terminará em \(String(notificarQuandoFaltar)) minutos"
-        notificationContent.body = "Evite telemetria, prepare-se para passar o ponto!"
-        notificationContent.badge = 1
-        notificationContent.sound = UNNotificationSound.default
-
-        let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.5, repeats: false)
-        
-        let notificationRequest = UNNotificationRequest(identifier: UUID().uuidString, content: notificationContent, trigger: notificationTrigger)
-
-        UNUserNotificationCenter.current().add(notificationRequest)
+        // necessary request user authorization for the app notifications (implemented on @main)
+        let content = UNMutableNotificationContent()
+        content.title = "IU Conecta"
+        content.subtitle = "Seu horário terminará em \(String(notificarQuandoFaltar)) minutos"
+        content.body = "Evite telemetria, prepare-se para passar o ponto!"
+        content.badge = 1
+        content.sound = UNNotificationSound.default
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request)
     }
 }
