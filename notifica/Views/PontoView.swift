@@ -5,20 +5,22 @@ struct PontoView: View {
     var body: some View {
         VStack(alignment: .leading) {
             CustomTabBar()
-            VStack(alignment: .leading) {
-                Text("ponto eletrônico")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .padding(.vertical, 10)
-                PointCard()
-                Text("notifica")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .padding(.vertical, 10)
-                NotificationCard()
+            ScrollView {
+                VStack(alignment: .leading) {
+                    Text("ponto eletrônico")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .padding(.vertical, 10)
+                    PointCard()
+                    Text("notifica")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .padding(.vertical, 10)
+                    NotificationCard()
+                }
+                .padding(.horizontal, 20)
+                Spacer()
             }
-            .padding(.horizontal, 20)
-            Spacer()
         }
     }
 }
