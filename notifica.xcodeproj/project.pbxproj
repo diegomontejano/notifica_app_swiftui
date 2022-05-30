@@ -18,6 +18,7 @@
 		79787920283089050074B2A5 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7978791F283089050074B2A5 /* CustomTabBar.swift */; };
 		798E0BDE2835402A00E68EDA /* NotificationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E0BDD2835402A00E68EDA /* NotificationCard.swift */; };
 		79DB318A2832F41200B458CC /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DB31892832F41200B458CC /* AppController.swift */; };
+		EB364081283FC16B00F16536 /* PointCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB364080283FC16B00F16536 /* PointCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		7978791F283089050074B2A5 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		798E0BDD2835402A00E68EDA /* NotificationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCard.swift; sourceTree = "<group>"; };
 		79DB31892832F41200B458CC /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		EB364080283FC16B00F16536 /* PointCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				791AC8152836A956009E6BEE /* NotificationBanner.swift */,
 				7978791F283089050074B2A5 /* CustomTabBar.swift */,
 				7978791C283074840074B2A5 /* CustomColors.swift */,
+				EB364080283FC16B00F16536 /* PointCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				791AC8162836A956009E6BEE /* NotificationBanner.swift in Sources */,
 				798E0BDE2835402A00E68EDA /* NotificationCard.swift in Sources */,
 				7978791D283074840074B2A5 /* CustomColors.swift in Sources */,
+				EB364081283FC16B00F16536 /* PointCard.swift in Sources */,
 				7921985F282F272B00DEA3D2 /* MainView.swift in Sources */,
 				7921986C282F27B600DEA3D2 /* PontoView.swift in Sources */,
 				7921985D282F272B00DEA3D2 /* notificaApp.swift in Sources */,
@@ -319,7 +323,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"notifica/Preview Content\"";
-				DEVELOPMENT_TEAM = 73WHW284SL;
+				DEVELOPMENT_TEAM = 2W23YQ4297;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -348,7 +352,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"notifica/Preview Content\"";
-				DEVELOPMENT_TEAM = 73WHW284SL;
+				DEVELOPMENT_TEAM = 2W23YQ4297;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

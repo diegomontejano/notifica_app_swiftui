@@ -7,7 +7,12 @@ struct PontoView: View {
         VStack(alignment: .leading) {
             CustomTabBar()
             VStack(alignment: .leading) {
-                Text("Ponto eletrônico")
+                Text("ponto eletrônico")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .padding(.vertical, 10)
+                PointCard()
+                Text("notifica")
                     .font(.title3)
                     .fontWeight(.bold)
                     .padding(.vertical, 10)

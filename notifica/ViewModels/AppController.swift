@@ -9,6 +9,7 @@ class AppController: ObservableObject {
     @Published var cargaHorariaDiaria: Int = 8
     @Published var countdownTimer: Double = 100.0
     @Published var progressBar: Double = 0.0
+    @Published var pointOfTheDay: Bool = true
 
     // runned on load PontoView()
     func simulateTimer(){
