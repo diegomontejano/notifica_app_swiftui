@@ -1,6 +1,8 @@
 import SwiftUI
 
-struct MainView: View {
+struct HomeView: View {
+    @EnvironmentObject var appController: AppController
+    
     init() {
         UITabBar.appearance().backgroundColor = UIColor.grayColor1 // background
         UITabBar.appearance().unselectedItemTintColor = UIColor.grayColor3 // unselected
@@ -27,12 +29,14 @@ struct MainView: View {
                 .tag(1)
         }
         .accentColor(.orange) // accent
+        .onAppear { self.appController.simulateTimer() }
+        .notificationBanner()
     }
 }
 
-struct MainView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        HomeView()
             .environmentObject(AppController())
     }
 }

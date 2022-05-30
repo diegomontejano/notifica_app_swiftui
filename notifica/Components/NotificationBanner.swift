@@ -10,25 +10,43 @@ struct NotificationBanner: ViewModifier {
                 // notification banner
                 VStack {
                     HStack {
+                        Spacer()
+                        // app icon
+                        Image("app-icon")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40)
                         VStack(alignment: .leading) {
-                            Text("IU Conecta")
-                                .fontWeight(.heavy)
-                            Text("Seu horário terminará em \(String(appController.notificarQuandoFaltar)) minutos!")
-                                .fontWeight(.medium)
+                            HStack {
+                                // notification title
+                                Text("IU Conecta")
+                                    .fontWeight(.bold)
+                                Spacer()
+                                // notification time
+                                Text("agora") 
+                                    .fontWeight(.regular)
+                                    .font(.system(size: 14))
+                                    .foregroundColor(.grayColor4)
+                            }
+                            // notification subtitle
+                            Text("Seu horário terminará em \(String(appController.notificarQuandoFaltar)) minutos")
+                                .fontWeight(.bold)
+                            // notification body
+                            Text("Evite telemetria, prepare-se para passar o ponto!")
+                                .fontWeight(.regular)
                         }
-                        .padding()
+                        .padding(.vertical, 10)
                         Spacer()
                     }
                     .frame(maxWidth: .infinity)
-                    .foregroundColor(.orange)
-                    .background(.white)
-                    .cornerRadius(10)
-                    .shadow(radius: 5)
-                    .padding()
+                    .background(.ultraThinMaterial)
+                    .cornerRadius(20)
+                    .font(.system(size: 16))
+                    .padding(8)
                     Spacer()
                 }
                 .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
                         withAnimation {
                             appController.showNotificationBanner = false
                         }
