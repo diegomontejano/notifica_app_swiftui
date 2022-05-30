@@ -16,13 +16,13 @@ struct CustomTabBar: View {
                     Image(systemName: "magnifyingglass")
                         .font(.system(size: 20, weight: .bold))
                     // alerts icon
-                    Image(systemName: "bell.badge")
+                    Image(systemName: "bell.fill")
                         .font(.system(size: 20, weight: .bold))
                 }
                 .padding(.horizontal, 10)
                 HStack {
                     // view title
-                    Text("Ponto")
+                    Text("ponto")
                         .font(.title2)
                         .fontWeight(.bold)
                     Spacer()
