@@ -1,11 +1,10 @@
-# Notifica App (under development)
+# Notifica App (demo version)
 
 My original app for help my colleagues to punch the clock at the right time. Technologies and knowledge used:
+* Swift,
 * SwiftUI,
+* Clean Code,
 * UX/UI Design,
-* SOLID Principles,
+* Responsive Layout,
 * MVVM Architectural Pattern,
-* API Rest/Restful Operations,
-* Firebase Authentication,
-* Firebase Cloud Firestore,
 * Local Notifications Alerts.
