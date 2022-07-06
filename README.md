@@ -9,4 +9,4 @@ My original app for help my colleagues to punch the clock at the right time. Tec
 * MVVM Architectural Pattern,
 * Local Notifications Alerts.
 
-Full App Presentation: https://www.youtube.com/watch?v=xKcj9b4xym8
+App Video: https://www.youtube.com/watch?v=xKcj9b4xym8
