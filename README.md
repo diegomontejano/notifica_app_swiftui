@@ -1,1 +1,0 @@
-# Notifica App (SwiftUI)
